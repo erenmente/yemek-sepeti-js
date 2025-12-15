@@ -63,7 +63,6 @@ Open the project Open the folder in your code editor (VS Code, IntelliJ, etc.).
 
 Run the application You can open index.html directly in your browser. Note: For the best experience (to avoid CORS issues with JSON fetching), it is recommended to use "Live Server" extension.
 
-📸 Screenshots
 ![Menu View](img/qrcode.png)
 
 👤 Author
