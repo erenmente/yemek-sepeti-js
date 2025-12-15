@@ -1,0 +1,36 @@
+/* Sayfa arka planına hafif bir doku verelim */
+body {
+    background-color: #f8f9fa;
+    /* Açık gri */
+}
+
+/* Kartların üzerine gelince (Hover) oluşan efekt */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Yumuşak geçiş */
+    border: none;
+    /* Kenar çizgilerini kaldır */
+    border-radius: 15px;
+    /* Köşeleri daha yuvarlak yap */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Kartı 5 piksel yukarı kaldır */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    /* Gölgeyi büyüt */
+    cursor: pointer;
+    /* Fare imleci el işareti olsun */
+}
+
+/* Resimlerin köşelerini de karta uyduralım */
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Fiyat etiketi özelleştirmesi */
+.badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+}

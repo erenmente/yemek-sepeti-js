@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Menü</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-center">
+            <span class="navbar-brand mb-0 h1 fs-3">🍽️ Lezzet Durağı</span>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Menümüz</h2>
+            <p class="text-muted">Lezzetli seçeneklerimizi keşfedin.</p>
+        </div>
+        <div class="container search-container my-4">
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-dark" onclick="qrKodGoster()">
+                    📱 Menü QR Kodunu Göster
+                </button>
+            </div>
+            <div class="container my-3">
+                <h3>Sepetim (<span id="sepet-count">0</span>)</h3>
+                <ul id="sepet-listesi" class="list-group">
+                </ul>
+                <div class="mt-2 text-end">
+                    <h4>Toplam: <span id="toplam-fiyat">0</span></h4>
+                </div>
+                <button class="btn btn-success w-100 mt-3" onclick="siparisiTamamla()">
+                    Siparişi Tamamla ✅
+                </button>
+            </div>
+            <input type="text" id="search-bar" class="form-control w-50 mx-auto"
+                placeholder="Yemek ara... (Örn: Köfte)">
+        </div>
+        <div class="btn-container text-center mb-4">
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="menu-container">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

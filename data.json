@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "kategori": "Çorbalar",
+    "ad": "Mercimek Çorbası",
+    "fiyat": "80 TL",
+    "aciklama": "Kruton ekmek ve limon ile servis edilir.",
+    "gorsel": "img/mercimek.jpg"
+  },
+  {
+    "id": 2,
+    "kategori": "Ana Yemekler",
+    "ad": "Adana Kebap",
+    "fiyat": "320 TL",
+    "aciklama": "Zırh kıyması, közlenmiş biber ve domates ile.",
+    "gorsel": "img/adana.jpg"
+  },
+  {
+    "id": 3,
+    "kategori": "Tatlılar",
+    "ad": "Sütlaç",
+    "fiyat": "90 TL",
+    "aciklama": "Fırınlanmış, fındık parçacıkları ile.",
+    "gorsel": "img/sutlac.jpg"
+  }
+]
