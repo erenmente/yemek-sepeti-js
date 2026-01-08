@@ -169,44 +169,52 @@ class QRMenu {
 
     updateCart() {
         const sepetListesi = document.getElementById("sepet-listesi");
-        const sepetCount = document.getElementById("sepet-count");
+        const mobileSepetListesi = document.getElementById("mobile-sepet-listesi");
+
         const toplamFiyatSpan = document.getElementById("toplam-fiyat");
+        const mobileToplamFiyatSpan = document.getElementById("mobile-toplam-fiyat");
+        const mobileCartCount = document.getElementById("mobile-cart-count");
 
         localStorage.setItem("sepet", JSON.stringify(this.sepet));
 
-        if (sepetListesi) {
-            sepetListesi.innerHTML = "";
-            let toplam = 0;
+        // Helper function to generate cart item HTML
+        const generateCartItemHTML = (yemek, index) => `
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <div class="d-flex align-items-center">
+                    <div class="ms-2">
+                        <h6 class="mb-0 text-dark">${yemek.ad}</h6>
+                        <small class="text-muted">${yemek.fiyat}</small>
+                    </div>
+                </div>
+                <button class="btn btn-sm text-danger" onclick="qrMenu.sepettenCikar(${index})">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </li>
+        `;
 
-            if (this.sepet.length === 0) {
-                sepetListesi.innerHTML = '<li class="list-group-item text-center text-muted py-4"><i class="bi bi-basket display-6 d-block mb-2"></i>Sepetiniz boş</li>';
-            } else {
-                this.sepet.forEach((yemek, index) => {
-                    const fiyatSayi = parseInt(yemek.fiyat.replace(/\D/g, '')) || 0;
-                    toplam += fiyatSayi;
+        let toplam = 0;
+        let cartHTML = "";
 
-                    const li = document.createElement("li");
-                    li.className = "list-group-item d-flex justify-content-between align-items-center px-0";
-                    li.innerHTML = `
-                        <div class="d-flex align-items-center">
-                            <div class="ms-2">
-                                <h6 class="mb-0 text-dark">${yemek.ad}</h6>
-                                <small class="text-muted">${yemek.fiyat}</small>
-                            </div>
-                        </div>
-                        <button class="btn btn-sm text-danger" onclick="qrMenu.sepettenCikar(${index})">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    `;
-                    sepetListesi.appendChild(li);
-                });
-            }
-
-            if (toplamFiyatSpan) {
-                toplamFiyatSpan.innerText = toplam + " ₺";
-            }
+        if (this.sepet.length === 0) {
+            cartHTML = '<li class="list-group-item text-center text-muted py-4"><i class="bi bi-basket display-6 d-block mb-2"></i>Sepetiniz boş</li>';
+        } else {
+            this.sepet.forEach((yemek, index) => {
+                const fiyatSayi = parseInt(yemek.fiyat.replace(/\D/g, '')) || 0;
+                toplam += fiyatSayi;
+                cartHTML += generateCartItemHTML(yemek, index);
+            });
         }
 
+        // Update Desktop Cart
+        if (sepetListesi) sepetListesi.innerHTML = cartHTML;
+        if (toplamFiyatSpan) toplamFiyatSpan.innerText = toplam + " ₺";
+
+        // Update Mobile Cart
+        if (mobileSepetListesi) mobileSepetListesi.innerHTML = cartHTML;
+        if (mobileToplamFiyatSpan) mobileToplamFiyatSpan.innerText = toplam + " ₺";
+        if (mobileCartCount) mobileCartCount.innerText = this.sepet.length;
+
+        // Update other badges if any
         const cartBadges = document.querySelectorAll('.cart-badge');
         cartBadges.forEach(badge => badge.innerText = this.sepet.length);
     }
