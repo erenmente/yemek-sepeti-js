@@ -8,7 +8,7 @@ Restoranlar için tasarlanmış modern, duyarlı ve etkileşimli bir dijital men
 
 ## 🔗 Canlı Demo
 
-🚀 **[Canlı projeyi görüntülemek için buraya tıklayın](https://erenmente.github.io/yemek-sepeti-js/)**
+🚀 **[Canlı projeyi görüntülemek için buraya tıklayın](https://www.erenmente.com/sepetsepetyemek/)**
 
 ---
 
