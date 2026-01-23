@@ -1,75 +1,87 @@
-# 🍽️ Digital Restaurant Menu & Ordering System
+# 🍽️ Dijital Restoran Menü ve Sipariş Sistemi
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Language](https://img.shields.io/badge/Language-JavaScript-yellow)
-![Framework](https://img.shields.io/badge/Style-Bootstrap5-blue)
+![Proje Durumu](https://img.shields.io/badge/Durum-Tamamland%C4%B1-success)
+![Dil](https://img.shields.io/badge/Dil-JavaScript-yellow)
+![Framework](https://img.shields.io/badge/Stil-Bootstrap5-blue)
 
-A modern, responsive, and interactive digital menu application designed for restaurants. This Single Page Application (SPA) allows customers to browse the menu, filter by category, search for items, manage a shopping cart, and generate a QR code for easy access.
+Restoranlar için tasarlanmış modern, duyarlı ve etkileşimli bir dijital menü uygulaması. Bu Tek Sayfalı Uygulama (SPA), müşterilerin menüyü incelemesine, kategoriye göre filtreleme yapmasına, ürün aramasına, sepetlerini yönetmesine ve kolay erişim için QR kod oluşturmasına olanak tanır.
 
-## 🔗 Live Demo
-🚀 **[Click here to view the live project](https://erenmente.github.io/yemek-sepeti-js/)**
+## 🔗 Canlı Demo
 
----
-
-## ✨ Features
-
-### 🛒 Dynamic Shopping Cart
-- **Add/Remove Items:** Users can easily add items to the cart and remove them with a single click.
-- **Persistent Storage:** Uses **LocalStorage** to save the cart state. Even if the page is refreshed or the browser is closed, the cart data remains intact.
-- **Real-time Calculation:** Automatically calculates the total price as items are added or removed.
-
-### 🔍 Search & Filtering
-- **Instant Search:** A responsive search bar that filters menu items in real-time as the user types.
-- **Category Filtering:** Tab-based filtering (e.g., Main Dishes, Soups, Desserts) for better user experience.
-
-### 📱 QR Code Generation
-- **Dynamic QR:** Generates a unique QR code for the current page URL using `qrcode.js`.
-- **High-Quality Download:** Includes a feature to download the QR code as a high-resolution PNG, ready to be printed and placed on restaurant tables.
-
-### 🎨 UI/UX Enhancements
-- **SweetAlert2 Integration:** Replaced standard browser alerts with beautiful, animated, and responsive popups for confirmation and success messages.
-- **Responsive Design:** Fully responsive layout built with **Bootstrap 5**, ensuring it works perfectly on mobile, tablet, and desktop.
+🚀 **[Canlı projeyi görüntülemek için buraya tıklayın](https://erenmente.github.io/yemek-sepeti-js/)**
 
 ---
 
-## 🛠️ Technologies Used
+## ✨ Özellikler
 
-* **HTML5** - Semantic structure.
-* **CSS3 & Bootstrap 5** - Styling and responsive grid system.
-* **JavaScript (ES6+)** - Logic, DOM manipulation, and LocalStorage management.
-* **JSON** - Simulating backend data (storing menu items).
-* **SweetAlert2** - For aesthetic alerts and modals.
-* **QRCode.js** - For generating client-side QR codes.
+### 🛒 Dinamik Alışveriş Sepeti
+
+- **Ekle/Çıkar:** Kullanıcılar ürünleri kolayca sepete ekleyebilir ve tek bir tıklamayla çıkarabilir.
+- **Kalıcı Depolama:** Sepet durumunu kaydetmek için **LocalStorage** kullanır. Sayfa yenilense veya tarayıcı kapatılsa bile sepet verileri korunur.
+- **Gerçek Zamanlı Hesaplama:** Ürünler eklendikçe veya çıkarıldıkça toplam fiyatı otomatik olarak hesaplar.
+
+### 🔍 Arama ve Filtreleme
+
+- **Anlık Arama:** Kullanıcı yazdıkça menü öğelerini gerçek zamanlı olarak filtreleyen duyarlı bir arama çubuğu.
+- **Kategori Filtreleme:** Daha iyi bir kullanıcı deneyimi için sekme tabanlı filtreleme (örneğin, Ana Yemekler, Çorbalar, Tatlılar).
+
+### 📱 QR Kod Oluşturma
+
+- **Dinamik QR:** `qrcode.js` kullanarak mevcut sayfa URL'si için benzersiz bir QR kod oluşturur.
+- **Yüksek Kaliteli İndirme:** QR kodunu, restoran masalarına yerleştirilmek üzere yazdırılmaya hazır yüksek çözünürlüklü bir PNG olarak indirme özelliği içerir.
+
+### 🎨 UI/UX Geliştirmeleri
+
+- **SweetAlert2 Entegrasyonu:** Standart tarayıcı uyarıları, doğrulama ve başarı mesajları için güzel, animasyonlu ve duyarlı pencerelerle değiştirildi.
+- **Duyarlı Tasarım:** **Bootstrap 5** ile oluşturulmuş tam duyarlı düzen, mobil, tablet ve masaüstünde mükemmel çalışmasını sağlar.
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Kullanılan Teknolojiler
+
+- **HTML5** - Semantik yapı.
+- **CSS3 & Bootstrap 5** - Stil ve duyarlı ızgara sistemi.
+- **JavaScript (ES6+)** - Mantık, DOM manipülasyonu ve LocalStorage yönetimi.
+- **JSON** - Backend verilerini simüle etme (menü öğelerini saklama).
+- **SweetAlert2** - Estetik uyarılar ve modallar için.
+- **QRCode.js** - İstemci tarafı QR kodları oluşturmak için.
+
+---
+
+## 📂 Proje Yapısı
 
 ```text
-├── index.html        # Main HTML structure
-├── app.js            # Main JavaScript logic (Fetch, Cart, Filtering)
-├── data.json         # Menu data source
-├── img/              # Folder for food images
-└── README.md         # Project documentation
+├── index.html        # Ana HTML yapısı
+├── script.js         # Ana JavaScript mantığı (Fetch, Sepet, Filtreleme)
+├── style.css         # Özel CSS dosyası
+├── data.json         # Menü veri kaynağı
+├── img/              # Yemek görselleri klasörü
+└── README.md         # Proje dokümantasyonu
 ```
-# Project documentation
-🚀 How to Run Locally
-Clone the repository
 
-Bash
+## 🚀 Yerel Olarak Nasıl Çalıştırılır?
 
-git clone [https://github.com/erenmente/yemek-sepeti-js.git](https://github.com/erenmente/yemek-sepeti-js.git)
-Open the project Open the folder in your code editor (VS Code, IntelliJ, etc.).
+1. **Depoyu klonlayın**
 
-Run the application You can open index.html directly in your browser. Note: For the best experience (to avoid CORS issues with JSON fetching), it is recommended to use "Live Server" extension.
+   ```bash
+   git clone https://github.com/erenmente/yemek-sepeti-js.git
+   ```
 
-![Menu View](img/qrcode.png)
+2. **Projeyi açın**
+   Klasörü kod editörünüzde (VS Code, IntelliJ vb.) açın.
 
-👤 Author
-Eren Mente
+3. **Uygulamayı çalıştırın**
+   `index.html` dosyasını doğrudan tarayıcınızda açabilirsiniz.
+   > **Not:** En iyi deneyim için (JSON verilerini çekerken CORS sorunlarını önlemek amacıyla) "Live Server" eklentisini kullanmanız önerilir.
 
-Computuer Engineering Student at Fırat University
+---
 
-GitHub: @erenmente
+## 👤 Yazar
 
-Copyright © 2025. All rights reserved.
+**Eren Mente**
+
+Fırat Üniversitesi Yazılım Mühendisliği Öğrencisi
+
+GitHub: [@erenmente](https://github.com/erenmente)
+
+Telif Hakkı © 2025. Tüm hakları saklıdır.
